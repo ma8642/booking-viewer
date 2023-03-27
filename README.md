@@ -13,9 +13,9 @@ I really enjoyed this challenge! Please note: I am new to Vue so a lot of the ti
 
 ## Features
 
-- Vue app which displays bookings in a list form and includes ref number, time duration, and booking status.
-- Filtering bar which allows user to search the bookings.
-- Color-coded booking statuses for easy perusal
+- [x] Vue app which displays bookings in a list form and includes ref number, time duration, and booking status.
+- [x] Filtering bar which allows user to search the bookings.
+- [x] Color-coded booking statuses for easy perusal
 
 ## Future Steps
 
