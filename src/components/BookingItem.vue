@@ -1,7 +1,7 @@
 <template>
   <div className="booking">
     <h2>{{ data.referenceNumber }}</h2>
-    <div>{{ data.startTime }} - {{ data.endTime }}</div>
+    <div>{{ data.timeSlot.startTime }} - {{ data.timeSlot.endTime }}</div>
     <div>{{ data.bookingState }}</div>
   </div>
 </template>
