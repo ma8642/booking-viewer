@@ -15,7 +15,8 @@ I really enjoyed this challenge! Please note: I am new to Vue so a lot of the ti
 
 - [x] Vue app which displays bookings as a list of items that include ref number, time duration, and booking status.
 - [x] Filtering bar which allows user to search the bookings.
-- [x] Color-coded booking statuses for easy perusal
+- [x] Api url not included in this repo for privacy reasons. See `To Run`.
+- [x] Color-coded booking statuses for easy perusal.
 
 ## Future Steps
 
