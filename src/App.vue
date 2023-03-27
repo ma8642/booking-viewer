@@ -4,6 +4,7 @@ export default {
   components: { BookingItem },
   data() {
     return {
+      search: '',
       bookingItems: [
         {
           id: 123,
@@ -35,6 +36,13 @@ export default {
         }
       ]
     }
+  },
+  computed: {
+    filteredBookings() {
+      return this.bookingItems.filter((booking) =>
+        booking.referenceNumber.toLowerCase().includes(this.search.toLowerCase())
+      )
+    }
   }
 }
 </script>
@@ -45,7 +53,8 @@ export default {
   </header>
 
   <main>
-    <div v-for="booking in bookingItems" :key="booking.id">
+    <input type="text" v-model="search" />
+    <div v-for="booking in filteredBookings" :key="booking.id">
       <BookingItem :data="booking"></BookingItem>
     </div>
   </main>
