@@ -6,14 +6,13 @@ export default {
   data() {
     return {
       search: '',
-      bookingItems: []
+      bookingItems: [],
+      loading: true
     }
   },
   computed: {
     filteredBookings() {
-      return this.bookingItems.filter((booking) =>
-        booking.referenceNumber.toLowerCase().includes(this.search.toLowerCase())
-      )
+      return this.bookingItems.filter((booking) => booking.referenceNumber.includes(this.search))
     }
   },
   created() {
@@ -23,14 +22,16 @@ export default {
   methods: {
     async fetchData() {
       this.bookingItems = await getAllBookings()
+      this.loading = false
     }
   }
 }
 </script>
 
 <template>
-  <main id="main-container">
-    <input type="text" v-model="search" />
+  <div v-if="loading">Loading...</div>
+  <main id="main-container" v-else>
+    <input type="text" v-model="search" placeholder="Search reference number" />
     <div v-for="booking in filteredBookings" :key="booking.id">
       <BookingItem :data="booking"></BookingItem>
     </div>
@@ -38,11 +39,13 @@ export default {
 </template>
 
 <style scoped>
-@media (min-width: 1024px) {
-  #main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+#main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  width: 100%;
 }
 </style>
