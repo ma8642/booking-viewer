@@ -25,3 +25,4 @@ I really enjoyed this challenge! Please note: I am new to Vue so a lot of the ti
 - [ ] Nicer page styling and CSS variables. I focused on learning Vue and implementing functionality for the 4-hour time limit. One big upgrade would be to have the search bar sticky so that even if user scrolls, it stays visible.
 - [ ] A checkbox that hides any completed bookings from list.
 - [ ] A message that says "No results found!" if the search does not match any reference numbers.
+- [ ] Default ordering of booking list by earliest booking.
